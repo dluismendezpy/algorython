@@ -1,6 +1,6 @@
-def print_hi(name):
-    print(f"I am, {name}")  # Press ⌘F8 to toggle the breakpoint.
-
+from algorithms.factorial import Factorial
 
 if __name__ == "__main__":
-    print_hi("Luis")
+    factorial: Factorial = Factorial(n=5)
+    print(factorial.iterate_factorial())
+    print(factorial.recur_factorial())
