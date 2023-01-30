@@ -27,11 +27,3 @@ jobs:
     - name: Run linting and formatting checks
       run: |
         pre-commit run --all-files
-    - name: Merge to master
-      if: success()
-      uses: actions/checkout@v2
-      with:
-        ref: master
-      run: |
-        git merge ${{ env.GITHUB_HEAD_REF }}
-        git push origin master
